@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--html is root element and container for all other elements-->
+<!--- it define the web browser about the type and version of html used here it is for html 5-->
+
+<head>
+    <!---this element is a container used for metadata(data about data, data about html document) and for links to scripts and stylesheets-->
+    <meta charset="utf-8">
+    <!--my document can include any char of any language now-->
+    <title>Personal Portfolio Website</title>
+    <!--title of my document-->
+    <link rel="stylesheet" href="style.css">
+    <!--when i want to attach any external resource file to my document only used in head(rel attribute defines the relationshp between the existing file and the linked file and href gives the url of the linked document) (<a> used in body for hypertext)-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- navigation section -->
+    <nav class="navbar">
+        <!--nav tag is used for defining nav links-->
+        <div class="max-width">
+            <div class="logo"><a href="#">Apoorva <span>Gupta</span> </a> </div>
+            <ul class="menu">
+                <!--When you hover over a hypertext it activates the hyperlink that redirects you to access additional information on other web pages-->
+                <!--each element has a default display time div has a block type display(starts from new line and takes 100% width) and span has a inline display(does not take new line) hence div is used as a container for other html elements-->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+
+    <!-- home section start -->
+    <section class="home" id="home">
+        <!--define a section in a document -->
+        <a href="https://drive.google.com/file/d/19XWGAAKwL-eD7xIgtYvdS6dJmNvh2lu5/view?usp=sharing" id="resume">Resume</button>
+    </section>
+
+
+
+
+
+
+    <!--About Section Styling-->
+    <section class="about" id="about">
+        <h2 class="title">About <span id="me">Me</span></h2>
+        <div class="about-content">
+            <Img src="pic.jpg" id="about-img"></Img>
+            <div id="about-text">
+                Hello! My name is Apoorva Gupta . I am currently in my third year of undergraduate.<br>I love problem solving and love to play guitar and sing.I am known for my calm,composed nature.<br>
+                I am positve and love to explore new things.One thing that separates me from others is my understandable nature.
+                Apart from this I love reading /researching about our "Subconsious-Mind"
+            </div>
+
+
+        </div>
+
+
+        <!--Skills styling-->
+        <section id="skills">
+            <h2>Here is <span>what I have learnt so far</span></h2>
+            <div class="skills">
+                <div class="Programming-Skills">
+                    <h4 class="heading">Programming Skills</h4>
+                    <div class="feature">c++</div>
+                    <div class="feature">Java</div>
+                    <div class="feature">JavaScript</div>
+
+
+                </div>
+                <div class="Development-Skills">
+                    <h4 class="heading">Development Skills</h4>
+                    <div class="feature">Android Development(Java)</div>
+                    <div class="feature">HTML5</div>
+                    <div class="feature">CSS3</div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!---project Section-->
+        <section class="projects" id="projects">
+            <h2> Projects</h2>
+            <div class="project-List">
+                <div class="project">MusicList App-I made an Android App using Android Studio where i can save my songs with the specified chord progression </div>
+                <div class="project">AttendanceTracker App- This is an Android App where admin can add student and faculty. Faculty then can mark attendance of the students  </div>
+                <div class="project">A Website - where I can show my Skills using HTML,CSS and JS .</div>
+            </div>
+        </section>
+
+
+        <!---Music Links -->
+        <section class="Music" id="music">
+            <h2>Like-Comment-Share</h2>
+            <div class="music-Links">
+                <Img src="guitarme.jpg" id="img"></Img>
+                <div class="links">
+                    <div class="head">Apart from coding i have have my music channel where i upload my content</div>
+                    <div class="link"><a href="https://www.youtube.com/channel/UCwtwlk496cDeWpLZygUe3_Q">Instagram Link</a>
+        <a href="https://www.youtube.com/channel/UCwtwlk496cDeWpLZygUe3_Q">Youtube Link</a></div>
+        </div>
+
+
+        </div>
+
+
+    </section>
+
+    <!---Contact Styling-->
+    <section class="contact" id="contact">
+        <h1 class="heading1">Give Your Feedback <span>Here</span></h1>
+        <div class="mail-icon">✉</div>
+        <h6 class="heading2">Shoot Me a <span>Message</span></h6>
+        <form onsubmit="post()" action="https://formspree.io/f/xdoppoka" method="POST">
+            <div class="form-box">
+                <h2 class="heading"></h2>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="name" placeholder="Enter Your First Name">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last_name" placeholder="Enter Your Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="_replyto" placeholder="Enter Your Email ">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea rows="7" name="message" placeholder="Enter Your Message"></textarea>
+                </div>
+                <input type="submit" value="Send Message" class="contact-btn">
+
+            </div>
+        </form>
+    </section>
+
+    <footer class="bg-dark">
+        <p>Copyright ©: Apoorva Gupta</p>
+    </footer>
+    <script src="script.js"></script>
+</body>

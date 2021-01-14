@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/*navigation bar styling*/
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.navbar {
+    background-color: palevioletred;
+    padding: 10px 50px;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar .sticky {
+    background-color: palevioletred;
+    padding: 15px 0px;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .sticky .logo a span {
+    color: white;
+}
+
+.navbar .logo a span {
+    color: indigo;
+}
+
+.navbar .menu li a:hover {
+    color: indigo
+}
+
+.navbar .menu li {
+    list-style: none;
+    font-size: large;
+    font-weight: 500;
+    margin-left: 25px;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: white;
+}
+
+
+/*home section styling*/
+
+.home {
+    display: flex;
+    background: url("bgbg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.home #resume {
+    margin: auto;
+    background-color: palevioletred;
+    color: black;
+    text-align: center;
+    padding: 1%;
+    font-weight: 1000;
+    font-size: xx-large;
+    width: 20%;
+}
+
+
+/*menu bttn styling */
+
+.menu-btn {
+    color: white;
+    font-size: 33px;
+    cursor: pointer;
+    display: none;
+}
+
+.hireMe {
+    display: box;
+}
+
+
+/*responsive media query start*/
+
+@media(max-width:991px) {
+    .max-width {
+        padding: 0 80px;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 1;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background-color: palevioletred;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu a:hover {
+        color: indigo;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+
+/*about section styling */
+
+.about .title {
+    color: indigo;
+    text-align: center;
+    text-shadow: black;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.about #me {
+    color: palevioletred;
+}
+
+.about .about-content {
+    display: flex;
+    margin: 50px;
+}
+
+.about .about-content #about-img {
+    flex: 1;
+}
+
+.about .about-content #about-img {
+    display: block;
+    width: 40%;
+    border-radius: 80%;
+    margin-top: 50px;
+}
+
+.about .about-content #about-text {
+    padding: 100px 100px;
+    font-size: x-large;
+    line-height: 1cm;
+}
+
+.about .title span {
+    color: indigo;
+}
+
+
+/*skills section styling */
+
+#skills h2 {
+    text-align: center;
+    font-size: 40px;
+    color: indigo;
+}
+
+#skills h2 span {
+    color: palevioletred;
+    margin-top: 20cm;
+}
+
+.skills {
+    padding: 10% 10%;
+    display: flex;
+    margin: 60px 60px;
+}
+
+.skills .Programming-Skills {
+    background: #fff;
+    flex: 1;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #d1d1d1;
+    font-size: 1.3rem;
+    font-weight: 1.4;
+}
+
+.skills .Development-Skills {
+    background: #fff;
+    flex: 1;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #d1d1d1;
+    font-size: 1.3rem;
+    font-weight: 1.4;
+}
+
+.skills .heading {
+    font-size: 40px;
+    font-weight: 1000;
+    color: indigo;
+    text-align: center;
+}
+
+.skills .feature {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    background: palevioletred;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 50px;
+}
+
+
+/*project Styling */
+
+.projects .project-List {
+    background: url("bg.jpg") no-repeat center center/cover;
+    margin: 100px 60px;
+    padding: 5% 5%;
+}
+
+.projects h2 {
+    color: indigo;
+    font-size: 45px;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.projects .project-List .project {
+    background-color: palevioletred;
+    color: white;
+    margin-top: 60px;
+    font-size: 25px;
+    padding: 1%;
+    border-radius: 5%;
+}
+
+
+/*music page styling */
+
+.Music {
+    margin-top: 50px 50px;
+    background: url("guitar.jpg") no-repeat center center/cover;
+}
+
+.music-Links {
+    display: flex;
+}
+
+.links .head {
+    text-align: center;
+    font-size: larger;
+    color: white;
+    font-weight: 400;
+    background: black;
+    border-radius: 20%;
+    padding: 3%;
+}
+
+.links .link {
+    padding: 3%;
+}
+
+.links a {
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: 1000;
+    margin: 40px 40px;
+    background: gray;
+    color: black;
+    /* padding: 1%; */
+    border-radius: 2rem;
+    font-style: italic;
+    font-size: xxx-large;
+}
+
+.music-Links #img {
+    display: block;
+    width: 70%;
+    margin-top: 60%;
+}
+
+.Music h2 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding: 1%;
+    font-weight: bolder;
+    font-weight: 1000;
+}
+
+
+/*contact Styling*/
+
+.contact {
+    text-align: center;
+}
+
+.contact .mail-icon {
+    display: inline-block;
+    border-radius: 60%;
+    font-size: 4rem;
+    padding: 1%;
+    background-color: palevioletred;
+}
+
+.contact .heading1 {
+    font-size: 50px;
+    margin: 60px 40px;
+}
+
+.contact .heading2 {
+    font-size: 30px;
+    margin: 40px 40px;
+}
+
+.contact span {
+    color: indigo;
+}
+
+.contact .form-box {
+    text-align: center;
+    border-style: outset;
+    width: 60%;
+    margin: auto;
+    padding: 2% 2%;
+}
+
+label {
+    max-width: 100%;
+    display: block;
+    text-align: left;
+    size: 20px;
+    margin-left: 15%;
+    font-weight: bolder;
+    /* to display label and input on different lines*/
+}
+
+input,
+.form-group textarea {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border: 0.5px solid #333;
+    border-radius: 5px;
+    margin-bottom: 4%;
+}
+
+.contact-btn {
+    background-color: palevioletred;
+    font-weight: bolder;
+    size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* footer*/
+
+.bg-dark {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem;
+}
